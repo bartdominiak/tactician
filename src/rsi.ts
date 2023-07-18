@@ -1,10 +1,3 @@
-/**
- * Calculates the Relative Strength Index (RSI) of a given array of prices
- * @param {number[]} prices - An array of price d
- * @param {number} [period = 14] - The number of periods to use for calculating RSI
- * @throws Will throw an error if the price data has less than period elements
- * @returns {number} The RSI value
- */
 export function rsi(prices: number[], period: number = 14): number {
     if (prices.length < period) {
         throw new Error(`Price data must have at least ${period} elements`);
