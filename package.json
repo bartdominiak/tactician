@@ -15,5 +15,20 @@
   },
   "dependencies": {
     "csv-parse": "^5.5.3"
+  },
+  "keywords": [
+    "technical-analyst",
+    "rsi",
+    "relative-strenth-index"
+  ],
+  "author": "smugers@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bartdominiak/tactician/issues"
+  },
+  "homepage": "https://github.com/bartdominiak/tactician#README",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bartdominiak/tactician.git"
   }
 }
