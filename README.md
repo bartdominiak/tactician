@@ -1,19 +1,34 @@
 # tactician
 
-A lightweight indicators used for financial technical analysis.
+> Lightweight indicators used for financial technical analysis.
 
-## Available indicators
+<div align="left">
+  <img width="750" heigth="250" src="/static/logo-tactician.jpg" alt="tactician logo">
+</div>
+
+[![npm version](https://badge.fury.io/js/tactician.svg)](https://badge.fury.io/js/tactician)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/tactician)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/bartdominiak/tactician/blob/master/LICENSE.md)
+
+## Currently available indicators
 - RSI (Relative Strength Index)
 
-## Planned indicators (todo)
+## Planned future indicators (todo)
 - OBV (On Balance Volume)
 - STOCH (Stochastic)
 
 ## Installation
 
 ### install npm package
+
+pnpm
 ```node
-pnpm i tactician // or yarn/npm
+pnpm i tactician // or npm
+```
+
+yarn
+```node
+yarn i tactician
 ```
 
 ### Import
@@ -29,5 +44,5 @@ const ohlcData = [
   // Add more OHLC data as needed
 ];
 
-const result = rsi(ohlcData);// Results  [57.14, 62.86 ...]
+const result = rsi(ohlcData); // Results  [57.14, 62.86 ...]
 ```

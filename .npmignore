@@ -1,6 +1,7 @@
-src
-ohlc
-node_modules
+/src
+/ohlc
+/node_modules
+/static
 tscconfig.json
 yarn.lock
 pnpm-lock.yaml
