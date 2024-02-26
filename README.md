@@ -3,7 +3,7 @@
 > Lightweight indicators used for financial technical analysis.
 
 <div align="left">
-  <img width="750" heigth="250" src="/static/logo-tactician.jpg" alt="tactician logo">
+  <img width="750" heigth="250" src="/static/logo-tactician.jpeg" alt="tactician logo">
 </div>
 
 [![npm version](https://badge.fury.io/js/tactician.svg)](https://badge.fury.io/js/tactician)
