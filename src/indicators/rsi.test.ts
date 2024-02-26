@@ -46,14 +46,13 @@ describe('RSI function', () => {
 
     const ohlcData = await processFile()
     const result = rsi(ohlcData)
+    const slicedResult = result.slice(0, 12)
 
     const expectedResults = [
       73.21627838127111, 69.72825527820932, 65.57911349460716,  61.26016290047852,
       64.85855539937933, 65.99761868568677, 60.853269729968346, 60.70753492329797,
       63.42699932904277, 69.77714721861734, 70.87459637178303,  68.91136137893126,
     ]
-
-    const slicedResult = result.slice(0, 12)
 
     expect(slicedResult).toEqual(expectedResults)
   })

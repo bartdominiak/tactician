@@ -1,6 +1,6 @@
 {
   "name": "tactician",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -17,9 +17,11 @@
     "csv-parse": "^5.5.3"
   },
   "keywords": [
+    "trading-indicators",
+    "indicators",
     "technical-analyst",
     "rsi",
-    "relative-strenth-index"
+    "relative-strength-index"
   ],
   "author": "smugers@gmail.com",
   "license": "MIT",
