@@ -7,7 +7,6 @@
 </div>
 
 [![npm version](https://badge.fury.io/js/tactician.svg)](https://badge.fury.io/js/tactician)
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/tactician)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/bartdominiak/tactician/blob/master/LICENSE.md)
 
 ## Currently available indicators

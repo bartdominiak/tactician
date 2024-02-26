@@ -21,7 +21,7 @@ describe('RSI function', () => {
     const expectedResults = [57.14285714285714, 62.857142857142854, 67.5208199871877, 59.47823067239657, 52.71606436280878, 46.96572446726842, 52.54085602987893, 52.54085602987893]
     expect(result).toEqual(expectedResults)
   })
-  it('should calculate RSI (based on external data OHLCV)', async () => {
+  it('should calculate RSI (based on external BINANCE:BTCUSDT OHLCV 1h interval data)', async () => {
     const csvFilePath = path.resolve('./ohlc/btc_usdt_1h.csv');
     console.log(csvFilePath)
 
