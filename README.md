@@ -1,6 +1,6 @@
 # tactician
 
-> Lightweight indicators used for financial technical analysis.
+> Boost your trading analysis capabilities in Node.js with our comprehensive collection of customizable indicators
 
 <div align="left">
   <img width="750" heigth="250" src="/static/logo-tactician.jpeg" alt="tactician logo">
@@ -11,10 +11,13 @@
 
 ## Currently available indicators
 - RSI (Relative Strength Index)
+- OBV (On Balance Volume)
 
 ## Planned future indicators (todo)
-- OBV (On Balance Volume)
-- STOCH (Stochastic)
+- STOCH (Stochastic Oscillator)
+- MACD (Moving Average Convergence Divergence)
+- MA (Moving Averages)
+- ATR (Avarage True Range)
 
 ## Installation
 
@@ -32,16 +35,25 @@ yarn i tactician
 
 ### Import
 ```typescript
-import { rsi } from 'tactician'
+import { rsi, obv } from 'tactician'
 ```
 
-## Use
+### Usage
 ```typescript
 const ohlcData = [
-  { open: 10, high: 12, low: 11, close: 1 },
-  { open: 10, high: 12, low: 11, close: 2 },
+  { open: 10, high: 12, low: 11, close: 1, volume: 10 },
+  { open: 10, high: 12, low: 11, close: 2, volume: 10 },
   // Add more OHLC data as needed
 ];
 
-const result = rsi(ohlcData); // Results  [57.14, 62.86 ...]
+const rsiResults = rsi(ohlcData); // Results  [57.14, 62.86 ...]
+const obvResults = obv(ohlcData); // Results  [10, 20 ...]
 ```
+
+## Contribute
+
+If you have a feature request then feel free to start a new issue, or just grab existing one.
+
+## License
+
+MIT

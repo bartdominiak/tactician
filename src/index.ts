@@ -1,2 +1,4 @@
 import { rsi } from './indicators/rsi'
-export { rsi }
+import { obv } from './indicators/obv'
+
+export { rsi, obv }

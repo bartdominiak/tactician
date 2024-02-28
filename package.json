@@ -1,20 +1,16 @@
 {
   "name": "tactician",
-  "version": "0.1.1",
+  "version": "0.2.0",
+  "description": "Lightweight trading indicators designed for technical analysts' use",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"
   },
-  "devDependencies": {
-    "@types/jest": "^29.5.5",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.1.1",
-    "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "csv-parse": "^5.5.3"
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bartdominiak/tactician.git"
   },
   "keywords": [
     "trading-indicators",
@@ -29,8 +25,13 @@
     "url": "https://github.com/bartdominiak/tactician/issues"
   },
   "homepage": "https://github.com/bartdominiak/tactician#README",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/bartdominiak/tactician.git"
+  "devDependencies": {
+    "@types/jest": "^29.5.5",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "csv-parse": "^5.5.3"
   }
 }

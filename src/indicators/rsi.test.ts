@@ -3,8 +3,8 @@ import * as fs from "fs";
 import * as path from "path";
 import { parse } from 'csv-parse';
 
-describe('RSI function', () => {
-  it('should calculate RSI (based on internal data)', () => {
+describe('RSI [Relative Strenth Index]', () => {
+  it('should return calculated RSI based on custom data', () => {
     const ohlcData = [
       { open: 10, high: 12, low: 11, close: 1 },
       { open: 10, high: 12, low: 11, close: 2 },
@@ -18,13 +18,14 @@ describe('RSI function', () => {
     ]
 
     const result = rsi(ohlcData)
-    const expectedResults = [57.14285714285714, 62.857142857142854, 67.5208199871877, 59.47823067239657, 52.71606436280878, 46.96572446726842, 52.54085602987893, 52.54085602987893]
+
+    const expectedResults = [
+      57.14285714285714, 62.857142857142854, 67.5208199871877, 59.47823067239657,
+      52.71606436280878, 46.96572446726842, 52.54085602987893, 52.54085602987893
+    ]
     expect(result).toEqual(expectedResults)
   })
-  it('should calculate RSI (based on external BINANCE:BTCUSDT OHLCV 1h interval data)', async () => {
-    const csvFilePath = path.resolve('./ohlc/btc_usdt_1h.csv');
-    console.log(csvFilePath)
-
+  it('should return calculated RSI based on external OHLCV', async () => {
     const processFile = async () => {
       const records = [];
       const parser = fs
