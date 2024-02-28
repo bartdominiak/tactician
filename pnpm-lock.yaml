@@ -6,21 +6,21 @@ settings:
 
 dependencies:
   csv-parse:
-    specifier: ^5.5.3
-    version: 5.5.3
+    specifier: ^5.5.4
+    version: 5.5.4
 
 devDependencies:
   '@types/jest':
-    specifier: ^29.5.5
+    specifier: ^29.5.12
     version: 29.5.12
   jest:
     specifier: ^29.7.0
     version: 29.7.0
   ts-jest:
-    specifier: ^29.1.1
+    specifier: ^29.1.2
     version: 29.1.2(@babel/core@7.23.9)(jest@29.7.0)(typescript@5.3.3)
   typescript:
-    specifier: ^5.2.2
+    specifier: ^5.3.3
     version: 5.3.3
 
 packages:
@@ -1004,8 +1004,8 @@ packages:
       which: 2.0.2
     dev: true
 
-  /csv-parse@5.5.3:
-    resolution: {integrity: sha512-v0KW6C0qlZzoGjk6u5tLmVfyZxNgPGXZsWTXshpAgKVGmGXzaVWGdlCFxNx5iuzcXT/oJN1HHM9DZKwtAtYa+A==}
+  /csv-parse@5.5.4:
+    resolution: {integrity: sha512-sPkvzL64UHoHZMj10z3r0RxwpjaY/vhM4vcAv+t+SDS6p9Joq8IFHe2TVUj4NDXy8l1Q7q8g/2ehtRTHmsU8ig==}
     dev: false
 
   /debug@4.3.4:
