@@ -1,6 +1,5 @@
 import { rsi } from './rsi';
-import * as fs from "fs";
-import * as path from "path";
+import * as fs from 'fs';
 import { parse } from 'csv-parse';
 
 describe('RSI [Relative Strenth Index]', () => {

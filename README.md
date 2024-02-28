@@ -46,8 +46,8 @@ const ohlcData = [
   // Add more OHLC data as needed
 ];
 
-const rsiResults = rsi(ohlcData); // Results  [57.14, 62.86 ...]
-const obvResults = obv(ohlcData); // Results  [10, 20 ...]
+const rsiResults = rsi(ohlcData); // Returns [57.14, 62.86 ...]
+const obvResults = obv(ohlcData); // Returns [10, 20 ...]
 ```
 
 ## Contribute
