@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/bartdominiak/tactician.git"
+    "url": "https://github.com/bartdominiak/tactician.git"
   },
   "keywords": [
     "trading-indicators",
