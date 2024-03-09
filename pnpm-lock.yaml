@@ -4,15 +4,13 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  csv-parse:
-    specifier: ^5.5.4
-    version: 5.5.4
-
 devDependencies:
   '@types/jest':
     specifier: ^29.5.12
     version: 29.5.12
+  csv-parse:
+    specifier: ^5.5.4
+    version: 5.5.4
   jest:
     specifier: ^29.7.0
     version: 29.7.0
@@ -1006,7 +1004,7 @@ packages:
 
   /csv-parse@5.5.4:
     resolution: {integrity: sha512-sPkvzL64UHoHZMj10z3r0RxwpjaY/vhM4vcAv+t+SDS6p9Joq8IFHe2TVUj4NDXy8l1Q7q8g/2ehtRTHmsU8ig==}
-    dev: false
+    dev: true
 
   /debug@4.3.4:
     resolution: {integrity: sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==}
