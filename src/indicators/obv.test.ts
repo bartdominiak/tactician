@@ -1,6 +1,5 @@
 import { obv } from './obv';
-import * as fs from 'fs';
-import { parse } from 'csv-parse';
+import { getOHLCVData  } from '../helpers/utils';
 
 describe('OBV [On Balance Volume]', () => {
   it('should return calculated OBV based on custom data', () => {
@@ -21,27 +20,7 @@ describe('OBV [On Balance Volume]', () => {
     expect(result).toEqual(expectedResults)
   })
   it('should return calculated OBV based on external OHLCV', async () => {
-    const processFile = async () => {
-      const records = [];
-      const parser = fs
-        .createReadStream('./ohlc/btc_usdt_1h.csv')
-        .pipe(parse());
-
-      for await (const record of parser) {
-        const [, open, high, low, close, volume ] = record
-
-        records.push({
-          open: parseFloat(open),
-          high: parseFloat(high),
-          low: parseFloat(low),
-          close: parseFloat(close),
-          volume: parseFloat(volume),
-        });
-      }
-      return records;
-    };
-
-    const ohlcData = await processFile()
+    const ohlcData = await getOHLCVData('./ohlc/btc_usdt_1h.csv')
     const result = obv(ohlcData)
     const slicedResult = result.slice(0, 12)
 

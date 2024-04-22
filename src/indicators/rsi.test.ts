@@ -1,6 +1,5 @@
 import { rsi } from './rsi';
-import * as fs from 'fs';
-import { parse } from 'csv-parse';
+import { getOHLCVData } from '../helpers/utils';
 
 describe('RSI [Relative Strenth Index]', () => {
   it('should return calculated RSI based on custom data', () => {
@@ -25,26 +24,7 @@ describe('RSI [Relative Strenth Index]', () => {
     expect(result).toEqual(expectedResults)
   })
   it('should return calculated RSI based on external OHLCV', async () => {
-    const processFile = async () => {
-      const records = [];
-      const parser = fs
-        .createReadStream('./ohlc/btc_usdt_1h.csv')
-        .pipe(parse());
-
-      for await (const record of parser) {
-        const [, open, high, low, close ] = record
-
-        records.push({
-          open: parseFloat(open),
-          high: parseFloat(high),
-          low: parseFloat(low),
-          close: parseFloat(close),
-        });
-      }
-      return records;
-    };
-
-    const ohlcData = await processFile()
+    const ohlcData = await getOHLCVData('./ohlc/btc_usdt_1h.csv')
     const result = rsi(ohlcData)
     const slicedResult = result.slice(0, 12)
 
