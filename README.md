@@ -12,10 +12,10 @@
 ## Currently available indicators
 - RSI (Relative Strength Index)
 - OBV (On Balance Volume)
-
-## Planned future indicators (todo)
 - STOCH (Stochastic Oscillator)
 - MACD (Moving Average Convergence Divergence)
+
+## Planned future indicators (todo)
 - MA (Moving Averages)
 - ATR (Avarage True Range)
 
