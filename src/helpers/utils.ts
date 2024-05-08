@@ -1,8 +1,8 @@
 import * as fs from 'fs';
 import { parse } from 'csv-parse';
 
-interface OHLCVRecord {
-  timestamp: number;
+export interface OHLCVRecord {
+  timestamp?: number;
   open: number;
   high: number;
   low: number;

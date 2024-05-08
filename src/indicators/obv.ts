@@ -1,15 +1,7 @@
 import { round } from "../helpers/utils";
+import { OHLCVRecord } from '../helpers/utils';
 
-type OHLCV = {
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-  volume: number;
-};
-
-
-export function obv(data: OHLCV[]): number[] {
+export function obv(data: OHLCVRecord[]): number[] {
   const finalObv: number[] = [];
   let obv = 0;
 

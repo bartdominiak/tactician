@@ -1,13 +1,7 @@
 import { round } from '../helpers/utils';
+import { OHLCVRecord } from '../helpers/utils';
 
-type OHLC = {
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-};
-
-export function rsi(ohlcData: OHLC[], period: number = 14): number[] {
+export function rsi(ohlcData: OHLCVRecord[], period: number = 14): number[] {
   let gains: number[] = [];
   let losses: number[] = [];
   let avgGain: number[] = [];

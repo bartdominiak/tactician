@@ -4,19 +4,19 @@ import { getOHLCVData  } from '../helpers/utils';
 describe('OBV [On Balance Volume]', () => {
   it('should return calculated OBV based on custom data', () => {
     const ohlcData = [
-      { open: 10, high: 12, low: 11, close: 1, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 2, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 3, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 4, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 3, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 2, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 1, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 2, volume: 10 },
-      { open: 10, high: 12, low: 11, close: 5, volume: 10 },
+      { open: 10, high: 12, low: 11, close: 1, volume: 100 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 120 },
+      { open: 10, high: 12, low: 11, close: 3, volume: 100 },
+      { open: 10, high: 12, low: 11, close: 4, volume: 250 },
+      { open: 10, high: 12, low: 11, close: 3, volume: 150 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 500 },
+      { open: 10, high: 12, low: 11, close: 1, volume: 600 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 900 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 100 },
     ]
 
     const result = obv(ohlcData)
-    const expectedResults = [ 10, 20, 30, 20, 10, 0, 10, 20 ]
+    const expectedResults = [ 120, 220, 470, 320, -180, -780, 120, 120 ]
     expect(result).toEqual(expectedResults)
   })
 

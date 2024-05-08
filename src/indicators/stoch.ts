@@ -1,13 +1,7 @@
 import { round } from '../helpers/utils';
+import { OHLCVRecord } from '../helpers/utils';
 
-interface OHLCData {
-  open: number;
-  high: number;
-  low: number;
-  close: number;
-}
-
-export function stoch(ohlcData: OHLCData[], period: number = 5): number[] {
+export function stoch(ohlcData: OHLCVRecord[], period: number = 5): number[] {
   const result: number[] = [];
 
   for (let i = period - 1; i < ohlcData.length; i++) {

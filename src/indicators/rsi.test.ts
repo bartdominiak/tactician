@@ -4,15 +4,15 @@ import { getOHLCVData } from '../helpers/utils';
 describe('RSI [Relative Strenth Index]', () => {
   it('should return calculated RSI based on custom data', () => {
     const ohlcData = [
-      { open: 10, high: 12, low: 11, close: 1 },
-      { open: 10, high: 12, low: 11, close: 2 },
-      { open: 10, high: 12, low: 11, close: 3 },
-      { open: 10, high: 12, low: 11, close: 4 },
-      { open: 10, high: 12, low: 11, close: 3 },
-      { open: 10, high: 12, low: 11, close: 2 },
-      { open: 10, high: 12, low: 11, close: 1 },
-      { open: 10, high: 12, low: 11, close: 2 },
-      { open: 10, high: 12, low: 11, close: 2 },
+      { open: 10, high: 12, low: 11, close: 1, volume: 100 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 120 },
+      { open: 10, high: 12, low: 11, close: 3, volume: 100 },
+      { open: 10, high: 12, low: 11, close: 4, volume: 250 },
+      { open: 10, high: 12, low: 11, close: 3, volume: 150 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 500 },
+      { open: 10, high: 12, low: 11, close: 1, volume: 600 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 900 },
+      { open: 10, high: 12, low: 11, close: 2, volume: 100 },
     ]
 
     const result = rsi(ohlcData)
