@@ -16,10 +16,11 @@ describe('OBV [On Balance Volume]', () => {
     ]
 
     const result = obv(ohlcData)
-    const expectedResults = [10, 20, 30, 20, 10, 0, 10, 20]
+    const expectedResults = [ 10, 20, 30, 20, 10, 0, 10, 20 ]
     expect(result).toEqual(expectedResults)
   })
-  it('should return calculated OBV based on external OHLCV', async () => {
+
+  it('should return calculated OBV based on external OHLCV data', async () => {
     const ohlcData = await getOHLCVData('./ohlc/btc_usdt_1h.csv')
     const result = obv(ohlcData)
     const slicedResult = result.slice(0, 12)

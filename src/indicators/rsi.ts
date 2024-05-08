@@ -1,11 +1,11 @@
+import { round } from '../helpers/utils';
+
 type OHLC = {
   open: number;
   high: number;
   low: number;
   close: number;
 };
-
-import { round } from '../helpers/utils';
 
 export function rsi(ohlcData: OHLC[], period: number = 14): number[] {
   let gains: number[] = [];

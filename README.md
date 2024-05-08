@@ -38,7 +38,7 @@ yarn i tactician
 import { rsi, obv } from 'tactician'
 ```
 
-### Usage
+### Example
 ```typescript
 const ohlcData = [
   { open: 10, high: 12, low: 11, close: 1, volume: 10 },
@@ -48,6 +48,7 @@ const ohlcData = [
 
 const rsiResults = rsi(ohlcData); // Returns [57.14, 62.86 ...]
 const obvResults = obv(ohlcData); // Returns [10, 20 ...]
+const stochResults = stoch(ohlcData); // Returns [ 66.67, 0 ... ]
 ```
 
 ## Contribute
