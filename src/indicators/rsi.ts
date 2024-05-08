@@ -5,6 +5,8 @@ type OHLC = {
   close: number;
 };
 
+import { round } from '../helpers/utils';
+
 export function rsi(ohlcData: OHLC[], period: number = 14): number[] {
   let gains: number[] = [];
   let losses: number[] = [];
@@ -29,7 +31,7 @@ export function rsi(ohlcData: OHLC[], period: number = 14): number[] {
 
   for (let i = 0; i < avgGain.length; i++) {
     rs[i] = avgGain[i] / avgLoss[i];
-    rsi[i] = 100 - (100 / (1 + rs[i]));
+    rsi[i] = round(100 - (100 / (1 + rs[i])));
   }
 
   return rsi;

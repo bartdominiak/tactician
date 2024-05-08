@@ -1,3 +1,5 @@
+import { round } from "../helpers/utils";
+
 type OHLCV = {
   open: number;
   high: number;
@@ -5,6 +7,7 @@ type OHLCV = {
   close: number;
   volume: number;
 };
+
 
 export function obv(data: OHLCV[]): number[] {
   const finalObv: number[] = [];
@@ -20,7 +23,7 @@ export function obv(data: OHLCV[]): number[] {
       obv -= data[i].volume;
     }
 
-    finalObv.push(obv);
+    finalObv.push(round(obv));
   }
 
   return finalObv;

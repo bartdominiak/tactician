@@ -29,3 +29,5 @@ export const getOHLCVData = async (fileDir: string): Promise<OHLCVRecord[]> => {
   }
   return records;
 };
+
+export const round = (num, decimals = 2) => Number(num.toFixed(decimals));
