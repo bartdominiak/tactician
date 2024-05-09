@@ -49,7 +49,7 @@ const ohlcData = [
 const rsiResults = rsi(ohlcData); // Returns [57.14, 62.86 ...]
 const obvResults = obv(ohlcData); // Returns [10, 20 ...]
 const stochResults = stoch(ohlcData); // Returns [ 66.67, 0 ... ]
-const macdResults = stoch(ohlcData); // Returns [ 0.03, 0.04 ... ]
+const macdResults = macd(ohlcData); // Returns [ 0.03, 0.04 ... ]
 ```
 
 ## Contribute
