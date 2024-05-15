@@ -1,61 +1,59 @@
-# tactician
+# Tactician
 
-> Boost your trading analysis capabilities in Node.js with our comprehensive collection of customizable indicators
+> Trading analysis comprehensive indicators.
 
-<div align="left">
-  <img width="750" heigth="250" src="/static/logo-tactician.jpeg" alt="tactician logo">
+<div align="center">
+  <img width="750" height="250" src="/static/logo-tactician.jpeg" alt="Tactician Logo">
 </div>
 
 [![npm version](https://badge.fury.io/js/tactician.svg)](https://badge.fury.io/js/tactician)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/bartdominiak/tactician/blob/master/LICENSE.md)
 
-## Currently available indicators
-- RSI (Relative Strength Index)
-- OBV (On Balance Volume)
-- STOCH (Stochastic Oscillator)
-- MACD (Moving Average Convergence Divergence)
-
-## Planned future indicators (todo)
-- MA (Moving Averages)
-- ATR (Avarage True Range)
+**Table of Contents**
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributors](#contributors)
+- [License](#license)
 
 ## Installation
 
-### install npm package
+### Prerequisites
+- Node.js (v12.0 or higher)
+- Npm or Yarn
 
-pnpm
-```node
-pnpm i tactician // or npm
+### Using npm
+```bash
+npm install tactician
 ```
 
-yarn
-```node
-yarn i tactician
+### Using Yarn
+```bash
+yarn install tactician
 ```
 
-### Import
+### Using pnpm
+```bash
+pnpm add tactician
+```
+
+## Usage
 ```typescript
-import { rsi, obv } from 'tactician'
-```
+import { rsi, obv, stoch, macd } from 'tactician';
 
-### Example
-```typescript
 const ohlcData = [
   { open: 10, high: 12, low: 11, close: 1, volume: 10 },
   { open: 10, high: 12, low: 11, close: 2, volume: 10 },
-  // Add more OHLC data as needed
+  // More OHLC data...
 ];
 
-const rsiResults = rsi(ohlcData); // Returns [57.14, 62.86 ...]
-const obvResults = obv(ohlcData); // Returns [10, 20 ...]
-const stochResults = stoch(ohlcData); // Returns [ 66.67, 0 ... ]
-const macdResults = macd(ohlcData); // Returns [ 0.03, 0.04 ... ]
+const rsiResults = rsi(ohlcData);
+const obvResults = obv(ohlcData);
+const stochResults = stoch(ohlcData);
+const macdResults = macd(ohlcData);
 ```
 
-## Contribute
-
-If you have a feature request then feel free to start a new issue, or just grab existing one.
+## Contributors
+Thanks to all the contributors who have helped this project grow
 
 ## License
-
-MIT
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
